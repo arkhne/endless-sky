@@ -75,7 +75,7 @@ mission "Assisting Hai"
 
 
 
-mission "First Contact: Unfettered"
+mission "First Contact: Unfettered 1"
 	landing
 	source
 		attributes "unfettered"
@@ -159,7 +159,7 @@ mission "First Contact: Unfettered"
 
 
 
-mission "First Contact: Unfettered"
+mission "First Contact: Unfettered 2"
 	landing
 	source
 		attributes "unfettered"
@@ -248,7 +248,9 @@ mission "Ask the Hai about the Unfettered"
 	source
 		attributes "hai"
 	to offer
-		has "First Contact: Unfettered: offered"
+		has "First Contact: Unfettered 1: offered"
+		or
+			has "First Contact: Unfettered 2: offered"
 	on offer
 		conversation
 			`The Unfettered Hai told you that they are the "true Hai," and seem to think that the other Hai are oppressing them. Would you like to look for someone here who can tell you the other side of the story?`
@@ -297,7 +299,9 @@ mission "Unfettered Jump Drive 1"
 	description "The Unfettered Hai have promised you rich rewards if you bring them more jump drives."
 	landing
 	to offer
-		has "First Contact: Unfettered: offered"
+		has "First Contact: Unfettered 1: offered"
+		or
+			has "First Contact: Unfettered 2: offered"
 		not "Wanderers: Jump Drive Source: active"
 	to fail
 		has "event: wanderers: unfettered invasion starts"
@@ -1177,7 +1181,9 @@ mission "Pirate Troubles [0]"
 		near "Waypoint" 2
 		government "Hai"
 	to offer
-		has "First Contact: Unfettered: offered"
+		has "First Contact: Unfettered 1: offered"
+		or
+			has "First Contact: Unfettered 2: offered"
 		"combat rating" > 1100
 		random < 10
 	on offer
